@@ -7,6 +7,8 @@ import ToDo from './Pages/ToDos/ToDo';
 import Calender from './Pages/Calender/Calender';
 import Header from './Components/Header';
 import AddToDo from './Components/AddToDo/AddToDo';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path='/calender' element={<Calender></Calender>}></Route>
         <Route path='/adtodo' element={<AddToDo></AddToDo>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import UpdateToDo from './UpdateToDo';
 import axios from 'axios';
-
+import {toast } from 'react-toastify';
 
 const ToDosTable = ({ todo, index, refetch }) => {
     const {_id, name, description, deadline } = todo;
@@ -13,8 +13,21 @@ const handleAddtoComplete = () => {
     }
     axios.post('http://localhost:5000/completetasks', tasks)
     .then(function (response) {
-        console.log(response)
+       console.log(response)
+       if(response.data.acknowledged === true){
+        toast.success('Task successfully added to the Completed list')
+    }
     })
+    fetch(`http://localhost:5000/task/${_id}`, {
+        method : 'DELETE'
+    })
+    .then(res => {
+        res.json()
+    })
+    .then( data => {
+        refetch()
+    })
+
 }
 
     return (
@@ -35,7 +48,7 @@ const handleAddtoComplete = () => {
                 {deadline}
             </td>
             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-              <UpdateToDo todo={todo}></UpdateToDo>
+              <UpdateToDo todo={todo} refetch={refetch}></UpdateToDo>
             </td>
         </tr>
     );

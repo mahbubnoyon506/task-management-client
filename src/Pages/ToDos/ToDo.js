@@ -11,7 +11,6 @@ const ToDo = () => {
                 return res.json()
             })
     )
-console.log(data)
     if(isLoading){
         return <Loader></Loader>
     }

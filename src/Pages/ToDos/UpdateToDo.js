@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import axios from 'axios'
+import {toast } from 'react-toastify';
 
 const style = {
     position: 'absolute',
@@ -17,7 +17,7 @@ const style = {
     p: 4,
 };
 
-const UpdateToDo = ({todo}) => {
+const UpdateToDo = ({todo, refetch}) => {
     const {_id} = todo;
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -33,7 +33,9 @@ const UpdateToDo = ({todo}) => {
         .then(function (response){
           console.log(response)
         })
-
+        refetch()
+        handleClose(true)
+        toast.success('Task updated successfully')
       }
 
     return (
