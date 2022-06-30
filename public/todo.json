@@ -1,0 +1,37 @@
+[
+    {
+        "name" : "HTML Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "5 July 2022"
+    },
+    {
+        "name" : "CSS Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "8 July 2022"
+    },
+    {
+        "name" : "JavaScript Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "10 July 2022"
+    },
+    {
+        "name" : "React Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "12 July 2022"
+    },
+    {
+        "name" : "Redux Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "14 July 2022"
+    },
+    {
+        "name" : "TypeScript Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "16 July 2022"
+    },
+    {
+        "name" : "Next JS Task",
+        "description" : "lorem ipsup doler si amet",
+        "deadline" : "18 July 2022"
+    }
+]
