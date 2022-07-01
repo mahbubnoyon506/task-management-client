@@ -6,7 +6,7 @@ const Calender = () => {
     const [selectedDay, setSelectedDay] = useState(null);
     return (
 
-        <div className="flex justify-center pt-10">
+        <div className="flex justify-center bg-[#F9F8F3] px-20 py-10">
             <Calendar
               value={selectedDay}
               onChange={setSelectedDay}

@@ -21,8 +21,8 @@ const handleonSubmit = e => {
   toast.success('Wow!! Task added successfully')
 }
   return (
-    <div>
-    <div className=' shadow-lg  w-[50rem] mx-auto p-10 mt-10'>
+    <div className='bg-[#F9F8F3] px-20 py-10'>
+    <div className='rounded-r-lg shadow-lg shadow-secondary w-[50rem] mx-auto p-10 mt-10 bg-base-100 '>
       <form action="" onSubmit={handleonSubmit}>
         <label class="label block">
           <span class="label-text">What is your Task?</span>

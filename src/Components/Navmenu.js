@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
-
+import HomeIcon from '@mui/icons-material/Home';
 
 
 
 const Navmenu = () => {
 
     return (
-        <div>
+        <div className='bg-gradient-to-r from-[#F9F8F3] via-[#F9F9F1] to-[#EAEFE0] z-10 px-20'>
             <nav className=" w-full flex flex-wrap items-center justify-between py-4 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
                     <button className="navbar-toggler text-gray-500 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -20,8 +20,8 @@ const Navmenu = () => {
                         </svg>
                     </button>
                     <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
-                        <Link className="flex items-center text-gray-900 hover:text-gray-900 focus:text-gray-900 mt-2 lg:mt-0 mr-1" to="/">
-
+                        <Link className="flex items-center text-primary-shade-900 hover:text-primary-shade-900 focus:text-primary-shade-900 mt-2 lg:mt-0 mr-1" to="/">
+                            <HomeIcon></HomeIcon>
                         </Link>
                         {/* <!-- Left links --> */}
                         <div className='mx-auto'>

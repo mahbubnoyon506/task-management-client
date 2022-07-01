@@ -4,7 +4,7 @@ import Loader from '../../Components/Loader';
 import ToDosTable from './ToDosTable';
 
 const ToDo = () => {
-   const {updateToDo, setUpdateToDo} = useState(null)
+
     const { data, isLoading, refetch } = useQuery('todos', () =>
         fetch('http://localhost:5000/tasks')
             .then(res => {
@@ -16,7 +16,7 @@ const ToDo = () => {
     }
     return (
         <div>
-            <div class="flex flex-col">
+            <div class="flex flex-col bg-[#F9F8F3] px-20 py-10">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="overflow-hidden">
@@ -24,7 +24,7 @@ const ToDo = () => {
                                 <thead class="bg-white border-b">
                                     <tr>
                                         <th scope="col" class=" font-medium text-gray-900 px-6 py-4 text-left">
-                                            #
+                                            Serial
                                         </th>
                                         <th scope="col" class=" font-medium text-gray-900 px-6 py-4 text-left">
                                             Mark Complete
@@ -46,7 +46,7 @@ const ToDo = () => {
                                 <tbody>
                                     {
                                         data.map((todo, index) =>
-                                            <ToDosTable key={todo._id} todo={todo} refetch={refetch} index={index} setUpdateToDo={setUpdateToDo}></ToDosTable>
+                                            <ToDosTable key={todo._id} todo={todo} refetch={refetch} index={index}></ToDosTable>
                                         )
                                     }
                                 </tbody>
