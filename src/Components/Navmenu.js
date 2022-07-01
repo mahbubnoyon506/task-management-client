@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
+import './customstyle.css'
 
 
 
@@ -23,11 +24,10 @@ const Navmenu = () => {
                         <Link className="flex items-center text-primary-shade-900 hover:text-primary-shade-900 focus:text-primary-shade-900 mt-2 lg:mt-0 mr-1" to="/">
                             <HomeIcon></HomeIcon>
                         </Link>
-                        {/* <!-- Left links --> */}
                         <div className='mx-auto'>
                             <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
                                 <li className="nav-item p-2 lg:pr-10 ">
-                                    <NavLink className="text-secondary lg:text-base tracking-wide hover:border-b-2 pb-7 hover:border-primary hover:text-primary" to="/">Home</NavLink>
+                                    <NavLink  className='text-secondary lg:text-base tracking-wide hover:border-b-2 pb-7 hover:border-primary hover:text-primary' to="/">Home</NavLink>
                                 </li>
                                 <li className="nav-item p-2 lg:pr-10">
                                     <NavLink className="text-secondary lg:text-base tracking-wide hover:border-b-2 pb-7 hover:border-primary hover:text-primary" to="/completedtask">Completed Task</NavLink>
@@ -39,15 +39,12 @@ const Navmenu = () => {
                                     <NavLink className="text-secondary lg:text-base tracking-wide hover:border-b-2 pb-7 hover:border-primary hover:text-primary" to="/calender">Calender</NavLink>
                                 </li>
                                 <li className="nav-item p-2 lg:pr-10">
-                                    <NavLink className="text-secondary lg:text-base tracking-wide  hover:border-b-2 pb-7 hover:border-primary hover:text-primary" to="#">About</NavLink>
+                                    <NavLink className="text-secondary lg:text-base tracking-wide hover:border-b-2 pb-7 hover:border-primary hover:text-primary" to="/about#">About</NavLink>
                                 </li>
+
                             </ul>
                         </div>
-                        {/* <!-- Left links --> */}
                     </div>
-                    {/* <!-- Collapsible wrapper --> */}
-
-                    {/* <!-- Right elements --> */}
                     <div className="flex items-center relative">
                         <div className='mr-5'>
                             <NavLink className="text-secondary lg:text-base tracking-wide hover:border-b-2 pb-7 hover:border-primary hover:text-primary" to="/adtodo">Add Task</NavLink>
@@ -56,7 +53,7 @@ const Navmenu = () => {
                         
                         <img
                             src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            class="rounded-full w-8"
+                            className="rounded-full w-8"
                             alt="Avatar"
                         />
                     </div>

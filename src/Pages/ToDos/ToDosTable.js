@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
+import React from 'react';
+
 import UpdateToDo from './UpdateToDo';
 import axios from 'axios';
 import {toast } from 'react-toastify';
@@ -11,14 +11,13 @@ const handleAddtoComplete = () => {
     const tasks = {
         name, description, deadline
     }
-    axios.post('http://localhost:5000/completetasks', tasks)
+    axios.post('https://red-poppy-97551.herokuapp.com/completetasks', tasks)
     .then(function (response) {
-       console.log(response)
        if(response.data.acknowledged === true){
         toast.success('Task successfully added to the Completed list')
     }
     })
-    fetch(`http://localhost:5000/task/${_id}`, {
+    fetch(`https://red-poppy-97551.herokuapp.com/task/${_id}`, {
         method : 'DELETE'
     })
     .then(res => {
@@ -31,23 +30,23 @@ const handleAddtoComplete = () => {
 }
 
     return (
-        <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-[#DAE7CB]">
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
-            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <div class="form-check">
-                    <input onClick={handleAddtoComplete} class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" />
+        <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-[#DAE7CB]">
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <div className="form-check">
+                    <input onClick={handleAddtoComplete} className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" />
                 </div>
             </td>
-            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                 {name}
             </td>
-            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                 {description}
             </td>
-            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                 {deadline}
             </td>
-            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
               <UpdateToDo todo={todo} refetch={refetch}></UpdateToDo>
             </td>
         </tr>

@@ -1,19 +1,16 @@
-import React, { useState } from "react";
-import "react-modern-calendar-datepicker/lib/DatePicker.css";
-import { Calendar } from "react-modern-calendar-datepicker";
+import React, { useState } from 'react'
+
+import { DtCalendar } from 'react-calendar-datetime-picker'
+import 'react-calendar-datetime-picker/dist/index.css'
 
 const Calender = () => {
-    const [selectedDay, setSelectedDay] = useState(null);
+    const [date, setDate] = useState(null)
     return (
-
-        <div className="flex justify-center bg-[#F9F8F3] px-20 py-10">
-            <Calendar
-              value={selectedDay}
-              onChange={setSelectedDay}
-              shouldHighlightWeekends
-            />
+        <div className='flex justify-center py-10 bg-[#F9F8F3]'>
+            <div>
+                <DtCalendar onChange={setDate} />
+            </div>
         </div>
-
     );
 };
 

@@ -5,7 +5,7 @@ const useComplete = () => {
     const [complete, setComplete] = useState([])
     useEffect( ( ) => {
        (async () => {
-          const {data} = await axios.get('http://localhost:5000/completetasks')
+          const {data} = await axios.get('https://red-poppy-97551.herokuapp.com/completetasks')
           setComplete(data)
        })()
     }, [])

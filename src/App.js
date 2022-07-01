@@ -6,10 +6,12 @@ import Completed from './Pages/CompletedTask/Completed';
 import ToDo from './Pages/ToDos/ToDo';
 import Calender from './Pages/Calender/Calender';
 import Header from './Components/Header';
-import AddToDo from './Components/AddToDo/AddToDo';
-import { ToastContainer, toast } from 'react-toastify';
+import AddToDo from './Pages/AddToDo/AddToDo';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Components/Footer';
+
+
 
 function App() {
   return (
